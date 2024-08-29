@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Moretto</title>
+    <style>
+        /* Osnovni stilovi */
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background-color: white;
+            color: #34495e;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1200x500') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .menu, .about, .gallery, .contact {
+            margin-bottom: 60px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .menu:hover, .about:hover, .gallery:hover, .contact:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #34495e;
+            text-align: center;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #e74c3c;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item span {
+            font-size: 18px;
+        }
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .contact-info {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .contact a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        /* Responsivnost */
+        @media (max-width: 768px) {
+            nav ul {
+                justify-content: center;
+            }
+            nav ul li {
+                flex-grow: 1;
+                text-align: center;
+            }
+            .gallery img {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            nav ul {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+            nav ul li {
+                margin: 0;
+            }
+            nav ul li a {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .menu-item span {
+                margin-bottom: 5px;
+            }
+            .gallery img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigacija -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">O Nama</a></li>
+                <li><a href="meni.html">Meni</a></li>
+                <li><a href="#gallery">Galerija</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero sekcija -->
+    <section class="hero">
+        <h1>Dobrodošli u restoran Moretto</h1>
+    </section>
+
+    <div class="container">
+        <!-- O Nama sekcija -->
+        <section id="about" class="about">
+            <h2>O Nama</h2>
+            <p>Restoran Moretto se nalazi u predivnoj Zelenici, poznat po vrhunskim morskim specijalitetima i prijateljskoj atmosferi. Naša misija je da svakom gostu pružimo jedinstveno kulinarsko iskustvo uz korišćenje najkvalitetnijih lokalnih sastojaka.</p>
+            <a href="meni.html" class="button">Pogledajte naš meni</a>
+        </section>
+
+        <!-- Galerija sekcija -->
+        <section id="gallery" class="gallery">
+            <h2>Galerija</h2>
+            <img src="ulaz.png" alt="Slika 1">
+            <img src="istoulaz.png" alt="Slika 2">
+            <img src="stolice.png" alt="Slika 3">
+        </section>
+
+        <!-- Kontakt sekcija -->
+        <section id="contact" class="contact">
+            <h2>Kontakt</h2>
+            <p class="contact-info">Adresa: Zelenika, Crna Gora</p>
+            <p class="contact-info">Telefon: <a href="tel:+38269405405">069 405 405</a></p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Restoran Moretto. Sva prava zadržana.</p>
+    </footer>
+</body>
+</html>

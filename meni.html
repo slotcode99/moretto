@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meni - Restoran Moretto</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            color: #34495e;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .menu-category {
+            margin-bottom: 30px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item span {
+            font-size: 18px;
+        }
+        .button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meni</h1>
+        
+        <!-- Predjela -->
+        <section class="menu-category">
+            <h2>Predjela</h2>
+            <div class="menu-item">
+                <span>Bruschetta s paradajzom i bosiljkom</span>
+                <span>5.00 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Caprese salata</span>
+                <span>7.50 €</span>
+            </div>
+        </section>
+        
+        <!-- Glavna jela -->
+        <section class="menu-category">
+            <h2>Glavna jela</h2>
+            <div class="menu-item">
+                <span>Pasta Carbonara</span>
+                <span>10.00 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Grilovani losos sa povrćem</span>
+                <span>15.00 €</span>
+            </div>
+        </section>
+
+        <!-- Desert -->
+        <section class="menu-category">
+            <h2>Desert</h2>
+            <div class="menu-item">
+                <span>Tiramisu</span>
+                <span>4.50 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Panna Cotta</span>
+                <span>5.50 €</span>
+            </div>
+        </section>
+
+        <!-- Dugme za povratak -->
+        <a href="pare.html" class="button">Nazad</a>
+    </div>
+</body>
+</html>
